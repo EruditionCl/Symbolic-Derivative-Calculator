@@ -15,8 +15,9 @@ This project is a very simple version of a Computer Algebra System (CAS) that is
 ## Example Usage
 
 ```python
-from core import x, pi
-from functions import Sin
+from core import *
+from functions import *
+from operations import *
 
 expr = Sin(x) + x**2
 
