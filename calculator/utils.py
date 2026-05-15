@@ -1,7 +1,7 @@
 
 
 def setconstant(*args):
-    from core import Constant
+    from .core import Constant
 
     """Accepts any numerical value and converts it to class Constant.
 

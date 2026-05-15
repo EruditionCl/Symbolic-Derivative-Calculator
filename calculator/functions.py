@@ -1,5 +1,5 @@
 
-from core import Function
+from .core import Function
 
 class Unary(Function):
 
@@ -23,7 +23,7 @@ class Unary(Function):
 
     def __new__(cls, arg):
 
-        from utils import setconstant
+        from .utils import setconstant
 
         """Creates the new object before initialization.
 
@@ -73,8 +73,8 @@ class Sin(Unary):
 
     def simplified(self):
 
-        from core import Constant, valuetypes, π, x
-        from operations import Multiply
+        from .core import Constant, valuetypes, π, x
+        from .operations import Multiply
 
         """Applies mathematical rules to the expression
         and simplifies it to its simplest form."""
@@ -130,8 +130,8 @@ class Cos(Unary):
 
     def simplified(self):
 
-        from core import Constant, valuetypes, π, x
-        from operations import Multiply
+        from .core import Constant, valuetypes, π, x
+        from .operations import Multiply
 
         """Applies mathematical rules to the expression
         and simplifies it to its simplest form."""
@@ -186,8 +186,8 @@ class Tan(Unary):
 
     def simplified(self):
 
-        from core import Constant, valuetypes, π, x
-        from operations import Multiply
+        from .core import Constant, valuetypes, π, x
+        from .operations import Multiply
 
         """Applies mathematical rules to the expression
         and simplifies it to its simplest form."""
@@ -242,8 +242,8 @@ class Ln(Unary):
 
     def simplified(self):
 
-        from core import Constant, Euler, x
-        from operations import Multiply, Power
+        from .core import Constant, Euler, x
+        from .operations import Multiply, Power
 
         e = Euler()
         
@@ -285,7 +285,7 @@ class NaturalExp(Unary):
 
     def simplified(self):
 
-        from core import Constant, e
+        from .core import Constant, e
 
         """Applies mathematical rules to the expression
         and simplifies it to its simplest form."""

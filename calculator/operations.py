@@ -1,6 +1,6 @@
 
-from core import Function
-from utils import setconstant
+from .core import Function
+from .utils import setconstant
 
 class Binary(Function):
 
@@ -53,7 +53,7 @@ class Add(Binary):
     
     def __str__(self):
 
-        from functions import NaturalExp
+        from .functions import NaturalExp
 
         """Represents Add object as a string. Surrounds
         x and y with parenthesis depending on their types
@@ -67,8 +67,8 @@ class Add(Binary):
     
     def simplified(self):
 
-        from core import Constant, Variable
-        from functions import Sin, Cos
+        from .core import Constant, Variable
+        from .functions import Sin, Cos
 
         """Applies mathematical rules to the expression
         and simplifies it to its simplest form."""
@@ -150,7 +150,7 @@ class Multiply(Binary):
 
     def __str__(self):
 
-        from core import Symbol, Identifier, Constant
+        from .core import Symbol, Identifier, Constant
 
         """Represents Multiply object as a string. Surrounds
         x and y with parenthesis depending on their types
@@ -174,7 +174,7 @@ class Multiply(Binary):
     
     def simplified(self):
 
-        from core import Constant
+        from .core import Constant
 
         """Applies mathematical rules to the expression
         and simplifies it to its simplest form."""
@@ -234,8 +234,8 @@ class Power(Binary):
 
     def simplified(self):
 
-        from core import Constant, e
-        from functions import NaturalExp
+        from .core import Constant, e
+        from .functions import NaturalExp
 
         """Applies mathematical rules to the expression
         and simplifies it to its simplest form."""
@@ -274,7 +274,7 @@ class Power(Binary):
     
     def degree(self,var):
 
-        from core import Constant
+        from .core import Constant
 
         """Returns the degree of the polynomial with respect to var."""
         if any(value == None for value in (self.x.degree(var), self.y.degree(var))):
@@ -307,8 +307,8 @@ class Exp(Binary):
 
     def simplified(self):
 
-        from core import Constant, e, valuetypes
-        from functions import NaturalExp
+        from .core import Constant, e, valuetypes
+        from .functions import NaturalExp
 
         """Applies mathematical rules to the expression
         and simplifies it to its simplest form."""
@@ -327,7 +327,7 @@ class Exp(Binary):
 
     def diff(self,var):
 
-        from functions import Ln
+        from .functions import Ln
 
         """Differentiates Exp object with respect to var.
         

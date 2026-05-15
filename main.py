@@ -1,2 +1,4 @@
 
-from __init__ import *
+from calculator import *
+
+

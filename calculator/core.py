@@ -13,47 +13,47 @@ class Expression:
         pass
     
     def __add__(self, other):
-        from operations import Add
+        from .operations import Add
         return Add(self, other)
     
     def __radd__(self, other):
-        from operations import Add
+        from .operations import Add
         return Add(other, self)
 
     def __sub__(self, other):
-        from operations import Subtract
+        from .operations import Subtract
         return Subtract(self, other)
     
     def __rsub__(self, other):
-        from operations import Subtract
+        from .operations import Subtract
         return Subtract(other, self)
 
     def __mul__(self, other):
-        from operations import Multiply
+        from .operations import Multiply
         return Multiply(self, other)
     
     def __rmul__(self, other):
-        from operations import Multiply
+        from .operations import Multiply
         return Multiply(other, self)
     
     def __truediv__(self, other):
-        from operations import Divide
+        from .operations import Divide
         return Divide(self, other)
     
     def __rtruediv__(self, other):
-        from operations import Divide
+        from .operations import Divide
         return Divide(other, self)
     
     def __pow__(self, other):
-        from operations import Power
+        from .operations import Power
         return Power(self, other)
 
     def __rpow__(self, other):
-        from operations import Power
+        from .operations import Power
         return Power(other, self)
     
     def __neg__(self):
-        from operations import Multiply
+        from .operations import Multiply
         return Multiply(-1, self)
 
     def __pos__(self):
@@ -76,7 +76,7 @@ class Expression:
 
     def taylor(self, var, n=10, a=0):
 
-        from utils import factorial
+        from .utils import factorial
 
         """Converts an expression to a taylor expansion.
         
@@ -231,7 +231,7 @@ class Constant(Value):
     
     def __add__(self, other):
         
-        from operations import Add
+        from .operations import Add
 
         """Return Sum of self.value and other (or other.value)"""
         if isinstance(other, (int, float)):
@@ -242,7 +242,7 @@ class Constant(Value):
     
     def __sub__(self, other):
 
-        from operations import Subtract
+        from .operations import Subtract
 
         """Return Difference of self.value and other (or other.value)"""
         if isinstance(other, (int, float)):
@@ -253,7 +253,7 @@ class Constant(Value):
 
     def __mul__(self, other):
 
-        from operations import Multiply
+        from .operations import Multiply
 
         """Return Product of self.value and other (or other.value)"""
         if isinstance(other, (int, float)):
@@ -268,7 +268,7 @@ class Constant(Value):
     
     def __truediv__(self, other):
 
-        from operations import Divide
+        from .operations import Divide
 
         """Return Quotient of self.value and other (or other.value)"""
         if isinstance(other, (int, float)):
@@ -279,7 +279,7 @@ class Constant(Value):
     
     def __pow__(self, other):
 
-        from operations import Power
+        from .operations import Power
 
         """Return the result of Exponention of self.value and other (or other.value)"""
         if isinstance(other, (int, float)):
