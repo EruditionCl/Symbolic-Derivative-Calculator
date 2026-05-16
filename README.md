@@ -29,9 +29,7 @@ Recursive symbolic differentiation is also utilized. Derivatives of most functio
 ## Example Usage
 
 ```python
-from core import *
-from functions import *
-from operations import *
+from calculator import *
 
 expr = Sin(x) + x**2
 
